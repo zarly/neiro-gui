@@ -1,0 +1,13 @@
+<template name="ProjectsView">
+    <div class="ProjectsView">
+        <span>Мои проекты</span><br />
+        <input type="text" class="projectNameField" value="{{activeProject.name}}" list="projectsList" />
+        <datalist id="projectsList">
+            {{#each projects}}
+                <option value="{{name}}">{{name}}</option>
+            {{/each}}
+        </datalist>
+        <br />
+        <button class="switchProjectBtn">Переключить проект</button>
+    </div>
+</template>
